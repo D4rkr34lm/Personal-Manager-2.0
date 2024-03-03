@@ -1,0 +1,14 @@
+:root {
+  --green-1: #78c786;
+  --green-2: #5A9F68;
+  --green-3: #588157;
+  --green-4: #3A5A40;
+  --green-5: #344E41;
+
+  background-color: #f0f0f0;
+  color: #444444;
+}
+
+body {
+  margin: 0px;
+}
