@@ -6,7 +6,9 @@
   --green-5: #344E41;
 
   background-color: #f0f0f0;
-  color: #444444;
+  color: black;
+
+  font-family: sans-serif;
 }
 
 body {
