@@ -10,7 +10,7 @@ const navActiv = ref(false)
     <button class="ui-button" id="nav-menu-button" @click=" navActiv=!navActiv "><img class="header-icon" src="./assets/icons/speisekarte.png"></button>
     <div class="header-container">
       <img class="fh-icon" src="./assets/icons/fh.png">
-      Software: Manganer
+      Manganer
     </div>
     <button class="ui-button"><img class="header-icon" src="./assets/icons/einloggen.png"></button>
   </header>
@@ -21,13 +21,14 @@ const navActiv = ref(false)
   </nav>
   <RouterView/>
   <footer>
-
+    ©2024 Frohn Software
   </footer>
 </template>
 
 <style scoped>
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10;
 
     display: flex;
@@ -75,8 +76,8 @@ const navActiv = ref(false)
   }
 
   nav {
-    position: relative;
-    z-index: 0;
+    position: sticky;
+    top: 9vh;
 
     width: 5vw;
     min-width: 200px;
@@ -118,4 +119,20 @@ const navActiv = ref(false)
     background-color: rgb(205, 205, 205);
   }
   
+  footer{
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--green-5);
+
+    height: 10vh;
+
+    font-size: 3vh;
+  }
+
 </style>
