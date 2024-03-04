@@ -15,6 +15,7 @@ const navActiv = ref(false)
     <button class="ui-button"><img class="header-icon" src="./assets/icons/einloggen.png"></button>
   </header>
   <nav v-if="navActiv">
+    <RouterLink to="/" class="nav-link"><img class="nav-icon" src="./assets/icons/home.png"> Home</RouterLink>
     <RouterLink to="/calender" class="nav-link"><img class="nav-icon" src="./assets/icons/kalender.png"> Calender</RouterLink>
     <RouterLink to="/email" class="nav-link"><img class="nav-icon" src="./assets/icons/mail.png"> Email</RouterLink>
     <RouterLink to="/taskboard" class="nav-link"><img class="nav-icon" src="./assets/icons/beschilderung.png"> Taskboard</RouterLink>
@@ -25,8 +26,16 @@ const navActiv = ref(false)
   </footer>
 </template>
 
-<style scoped>
+<style>
+  #app{
+    display: grid;
+
+    grid-template-columns: 200px auto;
+  }
+
   header {
+    grid-row: 1;
+    grid-column: span 2;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -79,15 +88,17 @@ const navActiv = ref(false)
     position: sticky;
     top: 9vh;
 
-    width: 5vw;
-    min-width: 200px;
+    grid-row: 2;
+    grid-column: 1;
+
+    height: 91vh;
 
     box-shadow: 0 0px 5px 0 grey;
     
     
     background-color: rgb(255, 255, 255);
 
-    min-height: 90vh;
+    
   }
 
   .nav-icon {
@@ -118,8 +129,18 @@ const navActiv = ref(false)
   .nav-link:active {
     background-color: rgb(205, 205, 205);
   }
+
+  #view-root {
+    grid-row: 2;
+    grid-column: 2;
+
+    height: 90vh;
+  }
   
   footer{
+    grid-row: 3;
+    grid-column: span 2;
+
     position: relative;
     z-index: 10;
 
